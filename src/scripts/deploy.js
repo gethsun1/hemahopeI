@@ -1,22 +1,27 @@
-// scripts/deploy_charity_platform.ts
 
-import { ethers } from "ethers";
 
-async function main() {
-  const provider = new ethers.providers.JsonRpcProvider(); // Replace with your provider configuration
+  async function main() {
 
-  const signer = provider.getSigner(); // Get the default signer from the provider
+    const [deployer] = await ethers.getSigners();
 
-  console.log("Deploying CharityPlatform contract with the account:", await signer.getAddress());
+    console.log(
+    "Deploying contracts with the account:",
+    deployer.address
+    );
 
-  const CharityPlatform = await ethers.ContractFactory.fromSolidity("CharityPlatform", signer).deploy();
+    const HemaHope = await ethers.getContractFactory("HemaHope");
+    const contract = await HemaHope.deploy();
 
-  console.log("CharityPlatform contract deployed to:", CharityPlatform.address);
+    console.log("Contract deployed at:", contract.address);
+
+    const saySomething = await contract.speak();
+    
+    console.log("saySomething value:", saySomething);
 }
 
 main()
   .then(() => process.exit(0))
-  .catch((error) => {
+  .catch(error => {
     console.error(error);
     process.exit(1);
   });
