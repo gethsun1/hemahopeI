@@ -1,0 +1,59 @@
+.box {
+  margin: 15px;
+  margin-top: 40px;
+}
+.About {
+  margin-left: 20px;
+  padding: 20px;
+}
+
+.br {
+  margin-top: 20px;
+}
+
+.head {
+  display: inline-block;
+  padding: 0px 12px;
+  color: rgb(85, 85, 85);
+  margin-bottom: 20px;
+  margin-left: 30px;
+  letter-spacing: 5px;
+  font-size: 11px;
+}
+
+.heading {
+  padding: 0px 12px;
+  font-size: 18px;
+  font-weight: 700;
+  margin-left: 30px;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  line-height: 1.8;
+}
+.link {
+  color: #333333;
+}
+
+@keyframes text {
+  from {
+    transform: translateX(-30px);
+    opacity: 0.5;
+  }
+}
+
+@media (max-width: 992px) {
+  .box {
+    text-align: center;
+  }
+}
+.about-text {
+  word-spacing: 2px; /* Adjust the value as needed */
+  line-height: 1.5; /* Adjust the value as needed */
+  padding-bottom: 20px; /* Add some padding to create space between text and line */
+}
+
+.section-divider {
+  border: 0; /* Remove default border */
+  border-bottom: 8px solid #AACCFF; /* Thick bottom horizontal line with color */
+  margin: 20px 0; /* Add margin for spacing */
+}
