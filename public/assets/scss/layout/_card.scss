@@ -1,0 +1,326 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  08. CARD CSS START
+/*----------------------------------------*/
+
+.card-area {
+    margin-bottom: -342px;
+
+    @media #{$xl} {
+        margin-bottom: -368px;
+    }
+
+    @media #{$lg} {
+        margin-bottom: -399px;
+    }
+
+    @media #{$md} {
+        margin-bottom: -368px;
+    }
+
+}
+
+.next-btn {
+    text-align: end;
+
+    @media #{$sm,$xs} {
+        text-align: start;
+    }
+
+    & .cause-slider-nav {
+        margin-top: 25px;
+
+        @media #{$sm,$xs} {
+            margin-top: 0;
+            margin-bottom: 40px;
+        }
+    }
+}
+
+
+.cause-slider-nav .slick-next.slick-arrow i {
+    background: #eb9309;
+    color: #fff;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    text-align: center;
+    line-height: 50px;
+    font-size: 16px;
+
+    &:hover {
+        background: #000;
+    }
+}
+
+.cause-slider-nav .slick-prev.slick-arrow i {
+    background: #eb9309;
+    color: #fff;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    text-align: center;
+    line-height: 50px;
+    font-size: 16px;
+    margin-right: 12px;
+
+    &:hover {
+        background: #000;
+    }
+}
+
+.tpcard {
+    &__wrapper {
+        position: relative;
+        z-index: 2;
+        border: 1px solid #F1F1F1;
+        box-shadow: 0px 10px 15px rgba(221, 221, 221, 0.15);
+        border-radius: 15px;
+        overflow: hidden;
+    }
+
+    &__content {
+        padding: 28px 24px 25px;
+
+        & p {
+            font-weight: 400;
+            font-size: 15px;
+            color: #666666;
+            margin-bottom: 42px;
+        }
+    }
+
+    &__img {
+        overflow: hidden;
+        border-radius: 15px 15px 0px 0px;
+
+        & img {
+            width: 100%;
+            border-radius: 15px 15px 0px 0px;
+
+            &:hover {
+                transform: scale(1.05);
+            }
+        }
+    }
+
+    &__title {
+        margin-bottom: 14px;
+        font-weight: 700;
+        font-size: 22px;
+        line-height: 30px;
+        letter-spacing: -0.01em;
+
+        @media #{$md} {
+            font-size: 19px;
+        }
+
+        & a {
+            &:hover {
+                color: #eb9309;
+            }
+        }
+    }
+
+    &__details {
+        padding-right: 35px;
+
+        @media #{$xs} {
+            padding-right: 20px;
+        }
+
+        & .subtitle {
+            font-weight: 500;
+            font-size: 10px;
+            line-height: 30px;
+            text-transform: uppercase;
+            color: #9A9A9A;
+        }
+
+        & .sale {
+            font-style: normal;
+            font-weight: 600;
+            font-size: 15px;
+            line-height: 30px;
+            text-transform: uppercase;
+            color: #0D0D0D;
+            margin-top: -12px;
+            display: block;
+        }
+    }
+}
+
+.progress-bar span {
+    text-align: right;
+    transform: translateY(-20px);
+    color: #0D0D0D;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 15px;
+}
+
+.progress-bar {
+    position: relative;
+
+    &::after {
+        content: "";
+        position: absolute;
+        border: 4px solid #eb9309;
+        width: 15px;
+        height: 15px;
+        border-radius: 100%;
+        bottom: -5px;
+        right: 0;
+        background: #fff;
+    }
+}
+
+.progress-bar {
+    overflow: inherit;
+    background-color: #eb9309;
+}
+
+.progress {
+    overflow: inherit;
+    height: 4px;
+    margin-bottom: 17px;
+    border-radius: 0;
+}
+
+.slick-20 {
+    margin: 0 -10px;
+    z-index: 5;
+}
+
+.slick-20 .slick-slide {
+    padding: 0 10px;
+}
+
+.progress.donation-details {
+    height: 12px;
+    margin-bottom: 28px;
+}
+
+.tpcard__wrapper.donation-details {
+    border: none;
+    background: none;
+    box-shadow: none;
+    border-radius: 0;
+}
+
+.tpcard__title.donation-details {
+    font-weight: 800;
+    font-size: 40px;
+    color: #0D0D0D;
+
+    @media #{$sm} {
+        font-size: 30px;
+    }
+}
+
+.tpcard__content.donation-details {
+    padding: 40px 0px 30px;
+}
+
+.donation-card-box.donaion-details .tpcard__title {
+    margin-bottom: 60px;
+
+    @media #{$xs} {
+        font-size: 27px;
+    }
+}
+
+.progress-bar.donation-details::after {
+    border: 10px solid #eb9309;
+    width: 37px;
+    height: 37px;
+    bottom: -11px;
+    right: -15px;
+
+    @media #{$xs} {
+        width: 33px;
+        height: 33px;
+    }
+}
+
+.progress-bar.donation-details span {
+    font-weight: 700;
+    font-size: 15px;
+    color: #EB9309;
+    position: absolute;
+    right: -8px;
+    top: -15px;
+}
+
+.tpcard__thumb.donation-details img {
+    border-radius: 10px;
+    min-width: 100%;
+
+    @media #{$xs} {
+        max-width: 100%;
+    }
+}
+
+.tpcard__details.donation-details span {
+    font-weight: 600;
+    font-size: 15px;
+    margin-bottom: -18px;
+    display: block;
+    color: #666666;
+}
+
+.tpcard__details.donation-details .sale {
+    font-weight: 600;
+    font-size: 24px;
+    color: #0D0D0D;
+
+    @media #{$xs} {
+        font-size: 18px;
+    }
+}
+
+///////////////////////
+// home 1 sass
+///////////////////////
+
+.card-area.card-area-2 {
+    margin-bottom: 0;
+
+    @media #{$xs} {
+        padding-bottom: 80px;
+    }
+
+    & .tpcard-btn {
+        @media #{$xs} {
+            margin-top: 40px;
+        }
+    }
+}
+
+.tpcard-btn .tp-btn:hover {
+    background: #121212;
+    color: #fff;
+}
+
+.tpcard__wrapper {
+    &.tpcard__wrappr-2 {
+        & h4 {
+            margin-bottom: 45px;
+            padding-right: 15px;
+        }
+    }
+}
+
+.card-area-2 {
+    background: #F6F6F4;
+
+    @media #{$md} {
+        padding-top: 70px;
+    }
+}
+
+.tpcta-3-btn .tp-btn:hover {
+    background: #121212;
+    color: #fff;
+}

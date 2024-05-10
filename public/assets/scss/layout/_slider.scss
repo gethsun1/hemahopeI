@@ -1,0 +1,619 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  04. SLIDER CSS START
+/*----------------------------------------*/
+.hero-area {
+    @media #{$xs} {
+        padding-top: 60px;
+    }
+}
+
+.tpslider {
+    &__content {
+        & .tphero__title {
+            & br {
+                @media #{$xs} {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    &__subtitle {
+        font-size: 14px;
+        font-weight: 600;
+        text-transform: uppercase;
+        line-height: 18px;
+        letter-spacing: 0.06em;
+        margin-bottom: 9px;
+        display: block;
+
+        &.has-before {
+            position: relative;
+
+            &::before {
+                content: '';
+                width: 12px;
+                height: 2px;
+                display: inline-block;
+                background-color: var(--tp-theme-primary);
+            }
+        }
+    }
+
+    &__title {
+        font-size: 52px;
+        font-weight: 800;
+        letter-spacing: -0.01em;
+        line-height: 1.1;
+        color: #121212;
+
+        & span {
+            color: #EB9309;
+        }
+
+        @media #{$lg} {
+            font-size: 48px;
+        }
+
+        @media #{$md} {
+            font-size: 36px;
+        }
+
+        @media #{$sm} {
+            font-size: 32px;
+        }
+
+        @media #{$xs} {
+            font-size: 30px;
+        }
+
+        & br {
+            @media #{$xs} {
+                display: none;
+            }
+        }
+    }
+}
+
+.tphero {
+    &__subtitle {
+        &.has-before-hero {
+            &::before {
+                content: "";
+                width: 19px;
+                height: 3px;
+                display: inline-block;
+                background-color: var(--tp-theme-primary);
+                position: relative;
+            }
+        }
+    }
+}
+
+.tpslider {
+    &__comment {
+        background: #000;
+        width: 282px;
+        height: 127px;
+        padding: 23px 30px;
+        border-radius: 6px;
+        top: 28%;
+        position: relative;
+
+        &::before {
+            width: 13px;
+            height: 13px;
+            clip-path: polygon(0 5%, 0 100%, 99% 5%);
+            content: "";
+            bottom: -12px;
+            background: #000;
+            border-radius: 2px;
+            position: absolute;
+        }
+
+        @media #{$xl} {
+            padding: 23px 22px;
+        }
+
+        @media #{$sm} {
+            top: 0;
+            width: 270px;
+            padding: 23px 26px;
+        }
+    }
+
+    &__peragraph {
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 19px;
+        letter-spacing: 0.03em;
+        color: #fff;
+        margin-bottom: 1px;
+    }
+
+    &__name {
+        color: #FFE24A;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 18px;
+        letter-spacing: 0.06em;
+        margin-right: 8px;
+    }
+
+    &__country {
+        font-size: 12px;
+        line-height: 15px;
+        letter-spacing: 0.06em;
+        color: #8D8383;
+    }
+}
+
+.slider__img {
+    overflow: hidden;
+    border-radius: 10px;
+
+    & img {
+        @media #{$xl,$lg,$md,$sm,$xs} {
+            width: 100%;
+        }
+
+        &:hover {
+            transform: scale(1.05);
+        }
+    }
+}
+
+.hero-down {
+    &__button {
+        margin-top: 40px;
+
+        & a {
+            background: #eb9309;
+            color: #fff;
+            width: 107px;
+            height: 107px;
+            border-radius: 100%;
+            line-height: 107px;
+            font-size: 25px;
+            display: block;
+            text-align: center;
+            margin-bottom: 30px;
+            transition: .3s ease;
+
+            &:hover {
+                background: #121212;
+                color: #fff;
+
+                & i {
+                    transform: translateY(6px);
+                }
+            }
+
+
+            @media #{$md} {
+                width: 80px;
+                height: 80px;
+                line-height: 80px;
+                font-size: 18px;
+            }
+        }
+
+        @media #{$sm} {
+            margin-top: 0;
+        }
+    }
+
+    &__title {
+        & span {
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 18px;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            color: #121212;
+            margin-bottom: 90px;
+
+            @media #{$xl,$lg} {
+                margin-bottom: 60px;
+            }
+
+            @media #{$xs} {
+                margin-bottom: 40px;
+            }
+        }
+    }
+
+    &__social {
+        & a {
+            margin: 0 14px;
+            font-size: 17px;
+
+            &:hover {
+                & i {
+                    color: #eb9309;
+                }
+            }
+
+            @media #{$xs} {
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
+
+
+.slider-active.hero-style .slick-dots button {
+    height: 8px;
+    width: 8px;
+    border: none;
+    background: #e2e2e2;
+}
+
+.slider-active.hero-style .slick-dots li {
+    list-style: none;
+    margin-bottom: 7px;
+}
+
+.slider-active.hero-style .slick-dots>li.slick-active button {
+    background: #EB9309;
+}
+
+.hero-style .slick-dots {
+    position: absolute;
+    left: -130px;
+    bottom: 0px;
+
+    @media #{$xl} {
+        left: -115px;
+    }
+
+    @media #{$lg} {
+        left: -100px;
+    }
+
+    @media #{$md} {
+        left: -80px;
+    }
+}
+
+.hero-style .slick-dots button {
+    font-size: 0;
+    padding: 0;
+    border-radius: 50%;
+}
+
+.hero-style .slick-dots>li.slick-active button {
+    background: #646464;
+}
+
+//////////////////////////
+// Home - 2 slider////////
+//////////////////////////
+
+.hero-slider.hero-style-2 .slick-dots button {
+    height: 8px;
+    width: 8px;
+    border: none;
+    background: #e2e2e2;
+}
+
+.hero-slider.hero-style-2 .slick-dots li {
+    list-style: none;
+    margin-bottom: 17px;
+    line-height: 1;
+}
+
+.hero-slider.hero-style-2 .slick-dots>li.slick-active button {
+    background: #EB9309;
+    transform: scale(2);
+}
+
+.hero-style-2 .slick-dots {
+    position: absolute;
+    bottom: 90px;
+    right: 240px;
+
+    @media #{$xxxl} {
+        right: 55px;
+    }
+
+    @media #{$xxl} {
+        right: 70px;
+    }
+
+    @media #{$xl} {
+        right: 60px;
+    }
+
+    @media #{$lg} {
+        right: 45px;
+    }
+
+    @media #{$md,$sm,$xs} {
+        right: 30px;
+    }
+}
+
+.hero-style-2 .slick-dots button {
+    font-size: 0;
+    padding: 0;
+    border-radius: 50%;
+}
+
+.hero-style-2 .slick-dots>li.slick-active button {
+    background: #646464;
+}
+
+/*----------------------------------------*/
+/*  01. SLIDER CSS START
+/*---------------------------------------*/
+.hero-slider {
+    & .slick-active {
+
+        & .tphero__title,
+        & .tphero__subtitle,
+        & .tpslider__content,
+        & .hero-btn {
+            animation-name: fadeInUp;
+            animation-fill-mode: both;
+        }
+    }
+}
+
+.hero__space {
+    margin-left: 228px;
+    margin-right: 228px;
+
+    @media #{$xxl} {
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+}
+
+.hero-btn {
+    margin-bottom: -7px;
+    animation-delay: .7s;
+    animation-duration: 1s;
+}
+
+.hero-area-2 {
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    &::before {
+        content: "";
+        position: absolute;
+        background: #161719;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.9;
+        left: 0;
+    }
+}
+
+.tphero {
+    &__title {
+        color: #FFFFFF;
+        font-size: 70px;
+        font-weight: 800;
+        margin-bottom: 50px;
+        animation-delay: .5s;
+        animation-duration: 1s;
+
+        & span {
+            color: var(--tp-theme-primary);
+        }
+
+        @media #{$lg} {
+            font-size: 59px;
+        }
+
+        @media #{$md} {
+            font-size: 50px;
+        }
+
+        @media #{$sm,$xs} {
+            font-size: 44px;
+        }
+
+        &.index-2 {
+            margin-bottom: 148px;
+            font-size: 60px;
+
+            @media #{$sm} {
+                margin-bottom: 50px;
+            }
+
+            @media #{$xs} {
+                margin-bottom: 50px;
+                font-size: 42px;
+            }
+        }
+    }
+
+    &__subtitle {
+        display: inline-block;
+        color: #FFFFFF;
+        margin-bottom: 22px;
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 14px;
+        letter-spacing: 0.06em;
+        animation-delay: .3s;
+        animation-duration: 1s;
+    }
+}
+
+.hero-height {
+    min-height: 940px;
+    z-index: 1;
+    position: relative;
+    display: flex !important;
+    align-items: end;
+
+    @media #{$md} {
+        min-height: 700px;
+    }
+
+    @media #{$sm,$xs} {
+        min-height: 600px;
+    }
+}
+
+.hero-item-box {
+    width: 100%;
+}
+
+.tpslider__thumb {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    text-align: center;
+    height: 100%;
+    z-index: -1;
+    width: auto;
+
+    & img {
+        display: inline-block;
+        max-width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+
+.hero-plr-225 {
+    padding-left: 225px;
+    padding-right: 255px;
+
+    @media #{$xxxl} {
+        padding-left: 120px;
+        padding-right: 120px;
+    }
+
+    @media #{$xxl,$xl,$lg} {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    @media #{$xs,$sm,$md} {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+///////////////////
+// home 3
+//////////////////
+
+.hero-area-3 {
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    &::before {
+        content: "";
+        position: absolute;
+        background: #161719;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.9;
+        left: 0;
+    }
+}
+
+.hero-item-box-3 {
+    min-height: 809px;
+    z-index: 1;
+    position: relative;
+    display: flex !important;
+    align-items: center;
+
+    @media #{$xs} {
+        min-height: 700px;
+    }
+
+    & .tphero {
+        &__subtitle {
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        &__play-btn {
+            & a {
+                background: #eb9309;
+                color: #fff;
+                width: 109px;
+                height: 109px;
+                border-radius: 100%;
+                text-align: center;
+                line-height: 109px;
+                font-size: 20px;
+                font-weight: 900;
+                display: inline-block;
+                animation: pulse 2s infinite;
+
+                @media #{$md} {
+                    width: 90px;
+                    height: 90px;
+                    line-height: 4.5;
+                }
+
+                @media #{$xs} {
+                    width: 80px;
+                    height: 80px;
+                    line-height: 80px;
+                }
+
+                &:hover {
+                    background: #fff;
+                    color: #121212;
+                }
+
+                & i {
+                    margin-left: 5px;
+                }
+            }
+
+            &.has-before-3::before {
+                content: "";
+                width: 164px;
+                height: 1px;
+                display: inline-block;
+                background-color: var(--tp-common-white);
+                position: absolute;
+                top: 54px;
+                right: 145px;
+
+                @media #{$md} {
+                    right: 105px;
+                    width: 120px;
+                    top: 46px;
+                }
+
+                @media #{$sm} {
+                    right: 220px;
+                }
+
+                @media #{$xs} {
+                    left: 105px;
+                    width: 120px;
+                    top: 40px;
+                }
+            }
+
+            @media #{$sm,$xs} {
+                margin-bottom: 30px;
+            }
+        }
+    }
+}

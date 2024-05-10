@@ -1,0 +1,145 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  06. SERVICES CSS START
+/*----------------------------------------*/
+.service-details-area {
+    @media #{$lg,$md,$sm} {
+        padding-top: 0;
+    }
+}
+
+.service-details-area-2 {
+    @media #{$lg,$md,$sm,$xs} {
+        padding-top: 30px;
+    }
+}
+
+.service {
+    $self: &;
+
+    &-section {
+        padding-right: 5px;
+    }
+
+    &-text {
+        padding-left: 53px;
+        margin-bottom: 90px;
+
+        @media #{$lg,$md,$sm,$xs} {
+            padding-left: 0;
+            margin-bottom: 40px;
+        }
+    }
+
+    &-title {
+        font-weight: 800;
+        font-size: 50px;
+        line-height: 1.3;
+        letter-spacing: -0.01em;
+        color: #121212;
+        margin-bottom: 130px;
+
+        @media #{$lg,$md,$sm,$xs} {
+            margin-bottom: 30px;
+        }
+
+        @media #{$sm} {
+            font-size: 40px;
+        }
+        @media #{$xs} {
+            font-size: 29px;
+        }
+    }
+
+    &-text {
+        & p {
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 30px;
+            color: #666666;
+            margin-bottom: 30px;
+        }
+    }
+
+    &-img {
+        @media #{$lg,$md,$sm,$xs} {
+            margin-bottom: 30px;
+        }
+
+        & img {
+            border-radius: 20px;
+            max-width: 100%;
+        }
+    }
+
+    &-play-btn {
+        & a {
+            background: #FFFFFF;
+            color: #121212;
+            width: 109px;
+            height: 109px;
+            border-radius: 100%;
+            line-height: 109px;
+            font-size: 20px;
+            display: block;
+            text-align: center;
+            position: absolute;
+            top: 245px;
+            left: 582px;
+            animation: pulse 2s infinite;
+
+            &:hover {
+                background: var(--tp-theme-primary);
+                color: #fff;
+            }
+
+            @media #{$xl} {
+                top: 200px;
+                left: 510px;
+            }
+
+            @media #{$lg} {
+                top: 140px;
+                left: 430px;
+            }
+
+            @media #{$md} {
+                width: 95px;
+                height: 95px;
+                line-height: 95px;
+                top: 120px;
+                left: 316px;
+            }
+
+            @media #{$sm} {
+                width: 80px;
+                height: 80px;
+                line-height: 80px;
+                top: 80px;
+                left: 216px;
+            }
+
+            @media #{$xs} {
+                display: none;
+            }
+        }
+    }
+}
+
+.service-btn .tp-btn:hover {
+    background: #121212;
+    color: #fff;
+}
+
+.service-thumb {
+    @media #{$md,$sm,$xs} {
+        padding-bottom: 40px;
+    }
+}
+
+.service-details {
+    @media #{$md,$sm,$xs} {
+        padding-bottom: 60px;
+    }
+}

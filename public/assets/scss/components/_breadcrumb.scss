@@ -1,0 +1,39 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  BREADCRUMB CSS START
+/*----------------------------------------*/
+
+.breadcrumb{
+    &__title{
+            letter-spacing: -0.01em;
+            font-weight: 800;
+            font-size: 62px;
+            margin-bottom: 30px;
+            color: var(--tp-common-white);
+            @media #{$xs} {
+                font-size: 50px;
+            }
+    }
+    &__list{
+        & span{
+            color: var(--tp-common-white);
+            font-weight: 700;
+            font-size: 18px;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            margin-left: 5px;
+            & a{
+                &:hover{
+                    color: var(--tp-theme-1);
+                }
+            }
+            & i{
+                font-size: 14px;
+            }
+            &.underline {
+                text-decoration: underline;
+              }
+        }
+    }
+}

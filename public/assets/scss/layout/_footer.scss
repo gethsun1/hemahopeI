@@ -1,0 +1,188 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  23. FOOTER CSS START
+/*----------------------------------------*/
+
+.tpborder-bottom {
+	border-bottom: 1px solid #2D2D2D;
+}
+.footer-social-area{
+    @media #{$xs} {
+        padding-top: 50px;
+    }
+}
+
+.tpfooter{
+    &__social{
+        @media #{$xs} {
+            text-align: left;
+        }
+        & a {
+            color: #FFFFFF;
+            border: 2px solid rgba(247, 247, 247, 0.15);
+            width: 50px;
+            height: 50px;
+            display: inline-block;
+            border-radius: 30px;
+            text-align: center;
+            line-height: 46px;
+            font-size: 14px;
+            margin-right: 8px;
+            transition: 0.3s;
+            &:hover {
+                background: #eb9309;
+                color: #fff;
+            }
+            @media #{$xs} {
+                margin-bottom: 10px;
+            }
+        }
+    }
+}
+
+.tpfooter-widget{
+    &__title {
+        font-family: 'Outfit';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 20px;
+        letter-spacing: 0.07em;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        margin-bottom: 28px;
+    }
+    & li{
+        list-style: none;
+    }
+    & a{
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 31px;
+        color: #969AAB;
+        &:hover {
+            color: #fff;
+          }
+    }
+}
+.tpfooter-widget{
+    &.tp-footer-col-2 {
+        margin-left: -58px;
+        @media #{$md,$xs} {
+            margin-left: 0;
+        }
+    }
+    &.tp-footer-col-3 {
+        margin-left: -115px;
+        @media #{$md,$sm,$xs} {
+            margin-left: 0;
+        }
+        @media #{$sm,$xs} {
+            margin-top: 50px;
+        }
+    }
+    &.tp-footer-col-4 {
+        margin-left: -70px;
+        @media #{$md,$sm,$xs} {
+            margin-left: 0;
+            margin-top: 50px;
+        }
+    }
+}
+
+.tpfooter-subscribe{
+    &  input {
+        height: 55px;
+        width: 100%;
+        background: #1E1E1E;
+        border: 0;
+        padding: 0 25px;
+        padding-right: 170px;
+        color: #fff;
+        border-radius: 6px;
+        &::placeholder{
+            color: #fff;
+        }
+    }
+    & button {
+        position: absolute;
+        background: #eb9309;
+        color: #fff;
+        right: 0;
+        top: 0;
+        height: 100%;
+        padding: 20px 40px;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 13px;
+        line-height: 16px;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        border-radius: 0 6px 6px 0px;
+        &:hover{
+            background: #fff;
+            color: #121212;
+        }
+    }
+}
+
+.tp-check-box{
+    &  label {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 24px;
+        color: #969AAB;
+    }
+    & input {
+        border: 0;
+        background: #484848;
+        height: 14px;
+        width: 14px;
+    }
+    & .form-check-input{
+        margin-top: 7px;
+        box-shadow: none;
+        border-radius: 3px;
+        &:checked {
+            background-color: #eb9309;
+            box-shadow: none;
+        }
+    }
+}
+
+.tp-copyright {
+    & p {
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 23px;
+        margin: 0;
+        color: #FFFFFF;
+    }
+}
+
+.tp-backtop{
+    @media #{$sm,$xs} {
+        margin-top: 30px;
+    }
+    & span{
+        margin-right: 12px;
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 23px;
+        text-transform: uppercase;
+        color: #FFFFFF;
+    }
+    & i {
+        width: 42px;
+        height: 42px;
+        display: inline-block;
+        color: #eb9309;
+        border-bottom: 2px solid #eb9309;
+        border-radius: 100%;
+        line-height: 2;
+        text-align: center;
+        font-size: 20px;
+        border-left: 2px solid;
+    }
+}

@@ -1,0 +1,307 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  18. MISSION CSS START
+/*----------------------------------------*/
+
+.breadcrumb-area {
+    @media #{$sm,$xs} {
+        padding-bottom: 160px;
+    }
+}
+
+.our-mission-area {
+    background-color: #F6F6F4;
+    margin-bottom: 45px;
+
+    @media #{$xs} {
+        padding-top: 50px;
+    }
+}
+
+.our-mission-tab {
+    & .our-mission-tab-inner {
+        &.tp-tab-menu {
+            position: relative;
+            margin-bottom: 122px;
+
+            @media #{$sm} {
+                margin-bottom: 60px;
+            }
+
+            @media #{$xs} {
+                margin-bottom: 40px;
+            }
+        }
+
+        & .tp-tab-line {
+            position: absolute;
+            content: "";
+            left: 0;
+            bottom: -1px;
+            height: 4px;
+            background-color: var(--tp-theme-primary);
+            transition: .3s ease;
+            z-index: 2;
+        }
+    }
+
+    & .nav-tabs {
+        & .nav-link {
+            font-weight: 700;
+            font-size: 14px;
+            text-align: center;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: #666666;
+            padding: 27px 85px;
+            border-radius: 0;
+            background: #fff;
+            position: relative;
+            z-index: 1;
+            @include transition(.3s);
+
+            @media #{$xl} {
+                padding: 27px 66px;
+            }
+
+            @media #{$md} {
+                padding: 25px 60px;
+            }
+
+            @media #{$sm} {
+                padding: 20px 28px;
+            }
+
+            @media #{$xs} {
+                padding: 20px 23px;
+                margin-bottom: 5px;
+                margin-right: 5px;
+            }
+
+            &::after{
+                position: absolute;
+                content: '';
+                left: -1px;
+                top: 0;
+                width: calc(100% + 2px);
+                height: 100%;
+                background-color: #fff;
+                @include transition(.3s);
+                visibility: hidden;
+                opacity: 0;
+                z-index: -1;
+                
+            }
+        
+            &.active{
+                box-shadow: 0px 10px 10px rgba(21, 48, 73, 0.1);
+                &::after{
+                    visibility: visible;
+                    opacity: 1;
+                }
+            }
+
+            &::before{
+                position: absolute;
+                content: '';
+                top: 50%;
+                @include transform(translateY(-50%));
+                right: 0;
+                width: 1px;
+                height: 41px;
+                background-color: #DFE3E9;
+                z-index: -1;
+                @media #{$xs} {
+                    display: none;
+                }
+            }
+            &:first-child{
+                &::after{
+                    left: 0;
+                }
+            }
+
+            &:nth-last-child(2){
+                &::before{
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+.volunteers-area-4.about-foundation {
+    @media #{$lg} {
+        padding-top: 100px;
+    }
+
+    @media #{$md} {
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
+
+    @media #{$sm} {
+        padding-top: 100px;
+        padding-bottom: 50px;
+    }
+
+    @media #{$xs} {
+        padding-top: 95px;
+
+    }
+}
+
+.volunteers-area-4 .volunteers-list.about-foundation ul {
+    margin-bottom: 30px;
+}
+
+.volunteers-section-4.about-foundation p {
+    @media #{$xs} {
+        font-size: 16px;
+    }
+}
+
+.fact-wrap.about-foundation .section-title {
+    margin-bottom: 16px;
+}
+
+.our-mission-area {
+    @media #{$xl,$lg,$md,$sm} {
+        padding-top: 70px;
+    }
+}
+
+.our-mission-tab-inner{
+
+    & .nav-tabs{
+        & .nav-link{
+            
+        }
+    }
+}
+
+
+
+
+.our-mission-tab-inner .border-position.active {
+    box-shadow: 0px 10px 10px rgba(21, 48, 73, 0.1);
+}
+
+.our-mission-tab .nav-link {
+    position: relative;
+}
+
+.our-mission-tab .nav-link:hover,
+.our-mission-tab .nav-link.active {
+    color: #171151;
+}
+
+.mission-box {
+    padding: 15px;
+    background: #fff;
+    border-radius: 10px;
+}
+
+.bg-white-mission {
+    background: #FFFFFF;
+    border-radius: 10px;
+}
+
+.our-vission-wrapper {
+    padding-left: 108px;
+    padding-right: 86px;
+
+    @media #{$xl} {
+        padding-left: 88px;
+    }
+
+    @media #{$lg} {
+        padding-left: 20px;
+        padding-right: 30px;
+    }
+
+    @media #{$md,$sm,$xs} {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    & .section-title {
+        font-weight: 800;
+        font-size: 32px;
+        text-align: center;
+        letter-spacing: -0.01em;
+        margin-bottom: 38px;
+        margin-top: 40px;
+
+        @media #{$xl} {
+            margin-bottom: 15px;
+        }
+
+        @media #{$lg} {
+            margin-bottom: 20px;
+            margin-top: 5px;
+            font-size: 30px;
+        }
+
+        @media #{$md} {
+            margin-bottom: 30px;
+            margin-top: 25px;
+            font-size: 25px;
+        }
+    }
+
+    & p {
+        font-weight: 400;
+        font-size: 15px;
+        color: #666666;
+        text-align: center;
+    }
+}
+
+.our-approch-img {
+    margin-left: -40px;
+
+    @media #{$xl} {
+        margin-left: -76px;
+    }
+
+    @media #{$md} {
+        margin-left: 0px;
+        margin-top: 30px;
+    }
+
+    @media #{$sm,$xs} {
+        margin-left: 0px;
+        margin-top: 30px;
+        display: flex;
+        justify-content: center;
+    }
+
+    & img {
+        border-radius: 10px;
+
+        @media #{$lg,$xs} {
+            max-width: 100%;
+        }
+    }
+}
+
+.our-mission-img {
+    @media #{$sm,$md} {
+        justify-content: center;
+        display: flex;
+    }
+
+    & img {
+        border-radius: 10px;
+
+        @media #{$lg} {
+            max-width: 120%;
+        }
+
+        @media #{$xs} {
+            max-width: 100%;
+        }
+    }
+}

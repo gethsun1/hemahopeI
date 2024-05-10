@@ -1,0 +1,1 @@
+sass --watch "C:\Users\Pranto PC\Dropbox\Donafund\assets\scss\main.scss":"C:\Users\Pranto PC\Dropbox\Donafund\assets\css\main.css"

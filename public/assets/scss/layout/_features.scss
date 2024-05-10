@@ -1,0 +1,246 @@
+@use '../utils' as *;
+/*----------------------------------------*/
+/*  09. FEATURES CSS START
+/*----------------------------------------*/
+
+.features-area {
+	&::before {
+		content: "";
+		position: absolute;
+		background: #121212;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		opacity: 0.65;
+		z-index: -1;
+	}
+}
+
+.box-90 {
+	margin: 0 92px;
+
+	@media #{$xxxl} {
+		margin: 0 60px;
+	}
+	@media #{$xxl} {
+		margin: 0 45px;
+	}
+
+	@media #{$xl} {
+		margin: 0 30px;
+	}
+
+	@media #{$lg,$md} {
+		margin: 0 15px;
+	}
+
+	@media #{$sm,$xs} {
+		margin: 0;
+	}
+}
+
+.tp-z-index {
+	position: relative;
+	z-index: 2;
+}
+
+.features-btn {
+	margin-bottom: 100px;
+
+	@media #{$xl} {
+		margin-bottom: 70px;
+	}
+
+	@media #{$md} {
+		margin-bottom: 65px;
+	}
+
+	@media #{$xs} {
+		margin-bottom: 50px;
+	}
+}
+
+.features-sep {
+	border-bottom: 2px solid rgba(255, 255, 255, 0.29);
+	margin-bottom: 50px;
+}
+
+.features-area {
+	padding-top: 342px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	z-index: 1;
+
+	@media #{$xl} {
+		padding-top: 357px;
+	}
+
+	@media #{$lg} {
+		padding-top: 380px;
+	}
+
+	@media #{$md} {
+		padding-top: 360px;
+	}
+}
+
+.features-details {
+	&__img {
+		margin-bottom: 26px;
+		height: 63px;
+	}
+
+	&__title {
+		color: #fff;
+		font-weight: 600;
+		font-size: 32px;
+		line-height: 42px;
+		letter-spacing: -0.02em;
+		margin-bottom: 17px;
+		font-family: 'Outfit';
+	}
+
+	&__content {
+		& p {
+			font-weight: 400;
+			font-size: 15px;
+			line-height: 24px;
+			color: #E1E1E1;
+		}
+	}
+
+	@media #{$sm,$xs} {
+		margin-top: 30px;
+	}
+	&.last-detail{
+		@media #{$lg} {
+			padding-left: 30px;
+		}
+	}
+	@media #{$md,$sm,$xs} {
+		padding-left: 0;
+		padding-bottom: 10px;
+	}
+}
+
+////////////////////
+// home 1 sass
+////////////////////
+.features-area-2 {
+	@media #{$sm,$xs} {
+		padding-top: 70px;
+	}
+}
+
+.tpfeatures-section {
+	&__wrapper {
+		padding-right: 65px;
+
+		@media #{$xl} {
+			padding-right: 60px;
+		}
+
+		@media #{$lg} {
+			padding-right: 20px;
+		}
+		@media #{$xs} {
+			padding-right: 0px;
+		}
+
+		& .section-title {
+			margin-bottom: 35px;
+			@media #{$xs} {
+				font-size: 30px;
+			}
+		}
+	}
+}
+
+
+.tpfeatures {
+	&__icon {
+		margin-right: 40px;
+
+		@media #{$lg} {
+			margin-right: 25px;
+		}
+	}
+
+	& img {
+		display: inline-block;
+		width: 60px;
+		height: 60px;
+		backface-visibility: hidden;
+		-webkit-transform: translate3d(0, 0, 0);
+		-moz-transform: translate3d(0, 0, 0);
+		-ms-transform: translate3d(0, 0, 0);
+		-o-transform: translate3d(0, 0, 0);
+		transform: translate3d(0, 0, 0);
+		-webkit-transition: transform 0.3s cubic-bezier(0.21, 0.6, 0.44, 2.18);
+		-moz-transition: transform 0.3s cubic-bezier(0.21, 0.6, 0.44, 2.18);
+		-ms-transition: transform 0.3s cubic-bezier(0.21, 0.6, 0.44, 2.18);
+		-o-transition: transform 0.3s cubic-bezier(0.21, 0.6, 0.44, 2.18);
+		transition: transform 0.3s cubic-bezier(0.21, 0.6, 0.44, 2.18);
+	}
+
+	&__title {
+		font-weight: 700;
+		font-size: 24px;
+		color: #0B1C2A;
+		margin-bottom: 16px;
+		&:hover{
+			color: #eb9309;
+		}
+	}
+
+	& p {
+		font-weight: 400;
+		font-size: 18px;
+		line-height: 30px;
+		color: #666666;
+	}
+	&:hover img{
+		-webkit-transform: translateY(0) translate3d(0, -5px, 0);
+		-moz-transform: translateY(0) translate3d(0, -5px, 0);
+		-ms-transform: translateY(0) translate3d(0, -5px, 0);
+		-o-transform: translateY(0) translate3d(0, -5px, 0);
+		transform: translateY(0) translate3d(0, -5px, 0);
+	}
+
+	@media #{$sm,$xs} {
+		margin-left: 0;
+		margin-bottom: 40px;
+	}
+}
+
+.ml-36 {
+	margin-left: 36px;
+
+	@media #{$lg} {
+		margin-left: 10px;
+	}
+
+	@media #{$md,$sm,$xs} {
+		margin-left: 0px;
+	}
+}
+
+
+///////////////////
+// breadcrumb area
+////////////////////
+
+.tpfeatures.tpfeatures-2 {
+	border: 1px solid #F6F6F4;
+	border-radius: 10px;
+	padding: 40px 40px 15px;
+	margin-bottom: 20px;
+}
+
+.features-area-3 {
+	@media #{$sm,$xs} {
+		padding-top: 100px;
+		padding-bottom: 30px;
+	}
+}

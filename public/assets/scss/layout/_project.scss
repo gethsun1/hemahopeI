@@ -1,0 +1,198 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  17. PROJECT CSS START
+/*----------------------------------------*/
+
+.tpproject-section {
+    &__wrapper {
+        position: relative;
+        z-index: 1;
+
+        & .sub-title {
+            margin-bottom: 0;
+            color: var(--tp-theme-2);
+        }
+
+        & .section-title {
+            margin-bottom: 30px;
+            color: var(--tp-theme-2);
+
+            @media #{$xs} {
+                font-size: 35px;
+            }
+        }
+
+        & .has-before {
+            &::before {
+                background: #121212;
+            }
+        }
+    }
+}
+
+.tpproject {
+    $self : &;
+    position: relative;
+
+    &__thumb {
+        position: absolute;
+        left: 90%;
+        top: -210px;
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.3s;
+
+        @media #{$xl} {
+            left: 82%;
+        }
+
+        @media #{$lg} {
+            left: 70%;
+        }
+
+        & img {
+            @media #{$md} {
+                width: 370px;
+            }
+        }
+    }
+
+    &__wrapper {
+        border-bottom: 1px solid #AE6B02;
+        padding: 46px 42px;
+        transition: .3s ease;
+        position: relative;
+        z-index: 1;
+
+        @media #{$md} {
+            padding: 40px 30px;
+        }
+
+        @media #{$sm,$xs} {
+            padding: 35px 30px;
+        }
+
+        &::after {
+            position: absolute;
+            content: '';
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+            background-color: var(--tp-theme-2);
+            opacity: 0;
+            visibility: hidden;
+            transition: .3s ease;
+            z-index: -1;
+        }
+
+        &:hover {
+            border-color: transparent;
+
+            &::after {
+                visibility: visible;
+                opacity: 1;
+            }
+
+            & #{$self} {
+                &__title {
+                    color: #fff;
+                }
+
+                &__thumb {
+                    opacity: 1;
+                    visibility: visible;
+                    top: -260px;
+
+                    @media #{$md} {
+                        top: -200px;
+                    }
+                }
+
+                &__icon {
+                    & a {
+                        color: var(--tp-common-white);
+                    }
+                }
+            }
+
+        }
+    }
+
+    &__title {
+        font-weight: 800;
+        font-size: 32px;
+        letter-spacing: -0.01em;
+        text-decoration: underline;
+
+        @media #{$xs} {
+            font-size: 28px;
+        }
+    }
+
+    &__shape {
+        & span {
+            background: #fff;
+            width: 12px;
+            height: 12px;
+            display: block;
+            border-radius: 12px;
+        }
+
+        & .tpproject-shape1 {
+            position: absolute;
+            top: 130px;
+            right: 107px;
+        }
+
+        & .tpproject-shape2 {
+            position: absolute;
+            top: 265px;
+            right: 770px;
+        }
+
+        & .tpproject-shape3 {
+            position: absolute;
+            top: 195px;
+            left: 148px;
+        }
+
+        & .tpproject-shape4 {
+            position: absolute;
+            bottom: 196px;
+            right: 64px;
+        }
+
+        & .tpproject-shape5 {
+            position: absolute;
+            bottom: 190px;
+            left: 205px;
+        }
+    }
+}
+.tpproject-bg {
+    background-color: #EB9309;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-repeat: no-repeat;
+}
+
+.tpproject-btn {
+    text-align: end;
+
+    @media #{$md,$sm,$xs} {
+        text-align: start;
+    }
+    & .tp-btn-black{
+        &:hover {
+            background: #fff;
+            color: #121212;
+        }
+    }
+}

@@ -1,0 +1,218 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  05. TEAM CSS START
+/*----------------------------------------*/
+
+.team {
+    &-section {
+        & .section {
+            &-title {
+                color: #fff;
+                margin-bottom: 60px;
+
+                @media #{$xs} {
+                    margin-bottom: 0;
+                    font-size: 40px;
+                }
+
+                & br {
+                    @media #{$xs} {
+                        display: none;
+                    }
+                }
+            }
+
+            &-sub-title {
+                color: #fff;
+            }
+        }
+    }
+
+    &__wrapper {
+        padding: 10px;
+        border: 1px solid #F1F1F1;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.02);
+        border-radius: 15px;
+
+        &:hover {
+            & .team-social {
+                & a {
+                    opacity: 1;
+                    visibility: visible;
+                    transform: translateY(-50%);
+
+                    @media #{$xs} {
+                        transform: translateY(-70%);
+                    }
+                }
+            }
+
+            & .team__img {
+                &::before {
+                    height: 100%;
+                    top: 0;
+                    bottom: auto;
+                }
+            }
+        }
+    }
+
+    &__img {
+        margin-bottom: 22px;
+        position: relative;
+        overflow: hidden;
+
+        & img {
+            width: 100%;
+            border-radius: 15px;
+        }
+    }
+
+    &__authur {
+        & p {
+            font-weight: 500;
+            font-size: 14px;
+            color: #8A8A8A;
+            text-align: center;
+        }
+    }
+
+    &__title {
+        font-weight: 600;
+        font-size: 22px;
+        margin-bottom: 7px;
+        display: block;
+        text-align: center;
+        color: #282F3B;
+
+        & a {
+            &:hover {
+                color: #eb9309;
+            }
+        }
+    }
+
+    &-bg {
+        &-left {
+            background-color: #161719;
+            position: absolute;
+            width: 50%;
+            height: 632px;
+            top: 0;
+            left: 0;
+            z-index: -2;
+            background-repeat: no-repeat;
+
+            @media #{$lg} {
+                height: 585px;
+            }
+
+            @media #{$xs} {
+                width: 100%;
+            }
+        }
+
+        &-right {
+            position: absolute;
+            background: #eb9309;
+            height: 632px;
+            width: 50%;
+            right: 0;
+            top: 0;
+            z-index: -2;
+
+            @media #{$lg} {
+                height: 585px;
+            }
+
+            @media #{$xs} {
+                width: 0;
+            }
+        }
+    }
+
+    &-social {
+        position: absolute;
+        top: 59%;
+        right: 0;
+        left: 0;
+
+        & a {
+            color: #FFFFFF;
+            height: 36px;
+            width: 36px;
+            margin-right: 10px;
+            border: 2px solid rgba($color: $white, $alpha: .09);
+            border-radius: 2px;
+            text-align: center;
+            display: inline-block;
+            font-size: 14px;
+            transition: 0.3s;
+            line-height: 32px;
+            opacity: 0;
+            visibility: hidden;
+
+            & svg {
+                transform: translateY(-2px);
+            }
+
+            &:hover {
+                background: #fff;
+                color: #121212;
+            }
+        }
+    }
+
+    &__img::before {
+        position: absolute;
+        content: "";
+        height: 0;
+        top: auto;
+        left: 0px;
+        background: #121212;
+        opacity: 0.7;
+        transition: 0.3s ease;
+        width: 100%;
+        bottom: 0;
+        border-radius: 15px;
+    }
+}
+
+.team-btn {
+    & .tp-btn-black {
+        @media #{$xs} {
+            margin-left: -10px;
+        }
+
+        &:hover {
+            background: #fff;
+            color: #121212;
+        }
+    }
+
+    @media #{$sm} {
+        margin-top: 0;
+    }
+}
+
+.team-box {
+
+    @media #{$xl} {
+        top: 45px;
+    }
+
+    @media #{$lg} {
+        margin-top: 50px;
+    }
+
+    @media #{$md} {
+        top: 60px;
+        margin-top: 30px;
+    }
+
+    @media #{$sm,$xs} {
+        margin-top: 30px;
+    }
+
+}

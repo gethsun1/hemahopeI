@@ -1,0 +1,104 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  03. MEAN MENU CSS START
+/*----------------------------------------*/
+
+
+.mean-container{
+	& a{
+		&.meanmenu-reveal{
+			display: none !important;
+		}
+	}
+	& .mean-nav {
+		background: none;
+		margin-top: 0;
+
+		& > ul {
+			padding: 0;
+			margin: 0;
+			width: 100%;
+			list-style-type: none;
+			display: block !important;
+
+			& > li{
+				&:first-child{
+					& > a{
+						border-top: 0;
+					}
+				}
+			}
+		}
+
+		& ul{
+			& li{
+				&.dropdown-opened {
+					& > a{
+						color: var(--tp-theme-1);
+					}
+				}
+
+				& a{
+					width: 100%;
+					padding: 10px 0;
+					color: var(--tp-common-black);
+					border-top: 1px solid #c7c5c5;
+					font-size: 14px;
+					line-height: 1.5;
+					font-weight: 700;
+
+					&:hover{
+						color: var(--tp-theme-primary);
+					}
+
+					&.mean-expand {
+						margin-top: 5px;
+						padding: 0 !important;
+						line-height: 14px;
+						border: 1px solid #c7c5c5;
+						height: 30px;
+						width: 30px;
+						line-height: 30px;
+						color: var(--tp-common-black);
+						line-height: 30px;
+						top: 0;
+						font-weight: 400;
+						transition: .2s ease;
+						&:hover{
+							background: var(--tp-heading-1);
+							color: var(--tp-common-white);
+						}
+
+						&.mean-clicked{
+							background: var(--tp-heading-1);
+							color: var(--tp-common-white);
+
+							& i{
+								@include transform(rotate(45deg));
+								color: var(--tp-common-white);
+							}
+						}
+					}
+				}
+
+				& > a{
+					& > i{
+						display: none;
+					}
+					& .mean-expand {
+						& i{
+							display: inline-block;
+						}
+					}
+				}
+			}
+		}
+	}
+	& .mean-bar {
+		padding: 0;
+		min-height: auto;
+		background: none;
+		margin-bottom: 40px;
+	}
+}

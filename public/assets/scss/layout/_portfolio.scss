@@ -1,0 +1,326 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  16. PORTFOLIO CSS START
+/*----------------------------------------*/
+.portfolio-area {
+	@media #{$xl} {
+		padding-top: 100px;
+	}
+
+	@media #{$sm} {
+		padding-top: 140px;
+	}
+
+	@media #{$xs} {
+		padding-top: 80px;
+	}
+}
+
+.portfolio-slider .slick-list {
+	margin-left: -15px;
+	margin-right: -10px;
+}
+
+.portfolio-item {
+	margin: 0px 10px;
+
+	& img {
+		border-radius: 15px;
+	}
+}
+
+.portfolio-slider .slick-prev.slick-arrow i {
+	background: #fff;
+	color: #090909;
+	position: absolute;
+	z-index: 5;
+	top: 415px;
+	left: 603px;
+	transition: 0.3s;
+	height: 72px;
+	width: 72px;
+	border-radius: 50%;
+	line-height: 4;
+	font-size: 18px;
+
+	&:hover {
+		background: #EB9309;
+		color: #fff;
+	}
+
+	@media #{$xxxl} {
+		left: 450px;
+	}
+
+	@media #{$xxl} {
+		left: 350px;
+	}
+
+	@media #{$xl} {
+		left: 245px;
+	}
+
+	@media #{$lg} {
+		left: 150px;
+	}
+
+	@media #{$md,$sm,$xs} {
+		left: 15px;
+	}
+}
+
+.portfolio-slider .slick-next.slick-arrow i {
+	background: #fff;
+	color: #090909;
+	position: absolute;
+	z-index: 5;
+	top: 415px;
+	right: 603px;
+	transition: 0.3s;
+	height: 72px;
+	width: 72px;
+	border-radius: 50%;
+	line-height: 4;
+	font-size: 18px;
+
+	&:hover {
+		background: #EB9309;
+		color: #fff;
+	}
+
+	@media #{$xxxl} {
+		right: 450px;
+	}
+
+	@media #{$xxl} {
+		right: 350px;
+	}
+
+	@media #{$xl} {
+		right: 245px;
+	}
+
+	@media #{$lg} {
+		right: 150px;
+	}
+
+	@media #{$md,$sm,$xs} {
+		right: 15px;
+	}
+}
+
+.portfolio-btn {
+	margin-top: 32px;
+	margin-bottom: 120px;
+
+	@media #{$lg,$xs} {
+		margin-bottom: 80px;
+	}
+}
+
+
+////////////////////////////
+// our portfolio breadcrumb
+////////////////////////////
+.our-portfolio {
+	&-wrapper {
+		background: #F6F6F4;
+		border-radius: 20px;
+	}
+
+	&-thumb {
+		overflow: hidden;
+		border-radius: 20px;
+
+		& img {
+			border-radius: 20px;
+			min-width: 100%;
+
+			&:hover {
+				transform: scale(1.05);
+			}
+
+			@media #{$xl,$lg,$md,$sm,$xs} {
+				max-width: 100%;
+			}
+		}
+	}
+
+	&-content {
+		padding: 40px 46px;
+
+		@media #{$xs} {
+			padding: 30px;
+		}
+
+		& .portfolio-title {
+			font-weight: 800;
+			font-size: 28px;
+			letter-spacing: -0.01em;
+			color: #292930;
+			margin-bottom: 30px
+		}
+
+		& p {
+			font-weight: 400;
+			font-size: 18px;
+			color: #666666;
+			line-height: 1.5;
+			margin-bottom: 30px;
+			& br{
+				@media #{$lg,$md,$sm,$xs} {
+					display: none;
+				}
+			}
+		}
+
+		& .portfolio-title {
+			&:hover {
+				color: #eb9309;
+			}
+		}
+	}
+
+	&-btn {
+		& a {
+			background: #FFFFFF;
+			box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.04);
+			border-radius: 10px;
+			padding: 17px 40px;
+			font-weight: 600;
+			font-size: 18px;
+			line-height: 30px;
+			color: #121212;
+			display: inline-block;
+			transition: .3s;
+			@media #{$xs} {
+				padding: 17px 18px;
+			}
+			& i {
+				margin-left: 10px;
+			}
+
+			&:hover {
+				background: var(--tp-theme-primary);
+				color: var(--tp-common-white);
+
+				& i {
+					transform: translateX(5px);
+				}
+			}
+		}
+	}
+
+	&-pagination {
+		margin-top: 40px;
+	}
+}
+
+//////////////////////
+// portfolio details
+//////////////////////
+
+
+.portfolio-details {
+	margin-bottom: 32px;
+
+	&-title {
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 14px;
+		color: #121212;
+		margin-bottom: 10px;
+		display: block;
+	}
+
+	& p {
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 26px;
+		color: #666666;
+	}
+
+	&-wrapper {
+		& p {
+			font-weight: 400;
+			font-size: 16px;
+			color: #525258;
+		}
+
+		&.portfolio-margin {
+			margin-left: -23px;
+
+			@media #{$xs} {
+				margin-left: 0;
+			}
+		}
+	}
+
+	&-name {
+		font-weight: 500;
+		font-size: 18px;
+		line-height: 14px;
+		color: #03041C;
+	}
+
+	&-img {
+		margin-top: 110px;
+
+		@media #{$lg,$md,$sm,$xs} {
+			margin-top: 30px;
+		}
+
+		& img {
+			border-radius: 20px;
+			max-width: 100%;
+		}
+	}
+
+	&-thumb {
+		overflow: hidden;
+		border-radius: 20px;
+
+		& img {
+			border-radius: 20px;
+			max-width: 100%;
+			margin-top: 15px;
+		}
+	}
+}
+
+.portfolio-section {
+	& .section-title {
+		& br {
+			@media #{$xs} {
+				display: none;
+			}
+		}
+	}
+}
+
+.portfolio-details-area-2 {
+	@media #{$xs} {
+		padding-top: 0px;
+	}
+}
+
+.portfolio-details-area {
+	@media #{$lg,$md,$sm,$xs} {
+		padding-top: 60px;
+	}
+}
+
+.portfolio-section .service-title {
+	margin-bottom: 0;
+}
+
+.service-text.portfolio-detail {
+	margin-bottom: 70px;
+
+	@media #{$lg,$md,$sm,$xs} {
+		margin-bottom: 40px;
+		padding-left: 0;
+		margin-top: 30px;
+	}
+}

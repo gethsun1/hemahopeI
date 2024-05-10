@@ -1,0 +1,44 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  15. BRAND CSS START
+/*----------------------------------------*/
+
+.brand-area {
+	@media #{$sm} {
+		padding-top: 80px;
+	}
+
+	@media #{$xs} {
+		padding-top: 100px;
+	}
+}
+
+.brand-title {
+	font-weight: 700;
+	font-size: 14px;
+	text-transform: uppercase;
+	letter-spacing: 0.06em;
+	margin-bottom: 12px;
+	display: block;
+}
+
+.brand-title.has-before::before {
+	content: "";
+	width: 10px;
+	height: 10px;
+	margin-right: 5px;
+	display: inline-block;
+	background-color: var(--tp-theme-primary);
+	border-radius: 50%;
+}
+
+.brand-title.has-after::after {
+	content: "";
+	width: 10px;
+	height: 10px;
+	margin-left: 5px;
+	display: inline-block;
+	background-color: var(--tp-theme-primary);
+	border-radius: 50%;
+}

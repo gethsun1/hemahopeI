@@ -1,0 +1,45 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  SECTION TITLE CSS START
+/*----------------------------------------*/
+
+.section-sub-title {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 12px;
+    display: block;
+
+    &.has-before {
+        position: relative;
+
+        &::before {
+            content: '';
+            width: 12px;
+            height: 3px;
+            margin-right: 3px;
+            display: inline-block;
+            background-color: var(--tp-theme-primary);
+        }
+    }
+}
+.section-sub-title{
+    &.has-after::after {
+        content: "";
+        width: 12px;
+        height: 3px;
+        display: inline-block;
+        background-color: var(--tp-theme-primary);
+    }
+}
+
+.section-title {
+    font-weight: 800;
+    font-size: 42px;
+    line-height: 1.25;
+    margin-bottom: 50px;
+}
+

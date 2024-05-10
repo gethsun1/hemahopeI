@@ -1,0 +1,71 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  10. FACT CSS START
+/*----------------------------------------*/
+
+.fact-area {
+	@media #{$xs} {
+		padding-top: 50px;
+		padding-bottom: 50px;
+	}
+}
+
+.fact-wrap {
+	& .section-title {
+		margin-bottom: 30px;
+
+		@media #{$xs} {
+			font-size: 30px;
+		}
+
+		& br {
+			@media #{$xs} {
+				display: none;
+			}
+		}
+	}
+}
+
+.tp-fact {
+	background: #FFFFFF;
+	border: 1px solid #F6F6F4;
+	box-shadow: 0px 6px 7px rgba(172, 172, 172, 0.08);
+	border-radius: 8px;
+	padding: 22px;
+
+	&__visit {
+		& h3 {
+			font-family: 'Outfit';
+			font-weight: 600;
+			font-size: 60px;
+			line-height: 88px;
+			color: #EB9309;
+			margin-right: 28px;
+
+			@media #{$xs} {
+				font-size: 50px;
+			}
+		}
+	}
+
+	&__title {
+		font-weight: 400;
+		font-size: 28px;
+		line-height: 88px;
+		color: #000000;
+		margin-bottom: -50px;
+		margin-top: -17px;
+	}
+
+	&__subtitle {
+		font-size: 14px;
+		color: #666666;
+	}
+}
+
+.md-margin {
+	@media #{$md} {
+		margin-top: 15px;
+	}
+}
