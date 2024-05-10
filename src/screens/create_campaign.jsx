@@ -1,6 +1,35 @@
 import Header from './header'
 import Footer from './footer'
+import React, { useState,useEffect } from 'react';
+import { ethers } from 'ethers';
 const CreateCampaign = ()=>{
+   const [connected, setConnected] = useState(false);
+    const [walletAddress, setWalletAddress] = useState('');
+    const getConnectedWallet = async()=>{
+      if (window.ethereum) {
+          try {
+       
+              const accounts = await window.ethereum.request({ method: 'eth_accounts' });
+              if (accounts.length > 0) {
+                  const provider = new ethers.providers.Web3Provider(window.ethereum);
+                  const signer = provider.getSigner();
+                  const address = await signer.getAddress();
+                  setWalletAddress(address);
+                  setConnected(true);
+                  onConnect(signer);
+              } else {
+                  console.error('No accounts connected');
+              }
+          } catch (error) {
+              console.error('Error checking wallet connection:', error.message);
+          }
+      } else {
+          console.error('Ethereum wallet not detected');
+      }
+  }
+  useEffect(()=>{
+      getConnectedWallet()
+  },[])
  return (
     <>
      <Header/>
