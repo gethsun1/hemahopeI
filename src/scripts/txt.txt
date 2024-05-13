@@ -1,0 +1,3 @@
+Test Charity Campaign
+A test campaign for charity donations
+Clothes, Books, Toys

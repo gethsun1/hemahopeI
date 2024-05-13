@@ -11,6 +11,8 @@ const CreateCampaign = () => {
   const [description, setDescription] = useState('');
   const [targetItems, setTargetItems] = useState('');
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState('');
+  const [successMessage, setSuccessMessage] = useState('');
 
   const getConnectedWallet = async () => {
     if (window.ethereum) {
@@ -23,13 +25,13 @@ const CreateCampaign = () => {
           setWalletAddress(address);
           setConnected(true);
         } else {
-          console.error('No accounts connected');
+          setError('No Web3 Wallet Connected');
         }
       } catch (error) {
-        console.error('Error checking wallet connection:', error.message);
+        setError('Error checking wallet connection: ' + error.message);
       }
     } else {
-      console.error('Ethereum wallet not detected');
+      setError('Web3 Wallet Not Detected');
     }
   };
 
@@ -40,19 +42,27 @@ const CreateCampaign = () => {
       return;
     }
     setLoading(true);
+    
     try {
       const provider = new ethers.providers.Web3Provider(window.ethereum);
       const signer = provider.getSigner();
       const hemahope = new ethers.Contract(
-        process.env.REACT_APP_HEMAHOPE_ADDRESS, // Replace with the deployed HemaHope contract address
+        '0xFdaf0F4c35D14AEE918672B890bbC2379694019B', // Replace with the deployed HemaHope contract address
         HemaHopeABI.abi,
         signer
       );
   
-      await hemahope.createPhysicalItemCampaign(name, description, targetItems);
+      const options = {
+        gasLimit: 300000, // Adjust the gas limit according to your needs
+        gasPrice: ethers.utils.parseUnits('100', 'gwei'), 
+      };
+  
+      const response = await hemahope.createPhysicalItemCampaign(name, description, targetItems, options);
       console.log('Campaign created successfully!');
+      alert(`Campaign ${name} created successfully!`); // Display the campaign name in the alert
     } catch (error) {
       console.error('Error creating campaign:', error.message);
+      alert('Error creating campaign. Please try again.');
     } finally {
       setLoading(false);
     }
@@ -115,6 +125,20 @@ const CreateCampaign = () => {
                             </button>
                           </div>
                         </div>
+                        {error && (
+                          <div className="col-xl-12 mt-3">
+                            <div className="alert alert-danger" role="alert">
+                              {error}
+                            </div>
+                          </div>
+                        )}
+                        {successMessage && (
+                          <div className="col-xl-12 mt-3">
+                            <div className="alert alert-success" role="alert">
+                              {successMessage}
+                            </div>
+                          </div>
+                        )}
                       </div>
                     </form>
                   </div>
