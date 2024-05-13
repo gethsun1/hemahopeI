@@ -11,7 +11,7 @@ const ViewCampaign = () => {
         const fetchCampaigns = async () => {
             try {
                 const provider = new ethers.providers.JsonRpcProvider('https://json-rpc.rolxtwo.evm.ra.blumbus.noisnemyd.xyz');
-                const contract = new ethers.Contract('0xFdaf0F4c35D14AEE918672B890bbC2379694019B', HemaHopeABI.abi, provider);
+                const contract = new ethers.Contract('0x888257109FB3d6bB91d365Bd96F82E530df6605E', HemaHopeABI.abi, provider);
                 const campaignCount = await contract.getCampaignCount();
                 const campaignsData = [];
 
