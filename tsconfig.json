@@ -12,7 +12,7 @@
       "typeRoots": ["node_modules/@types", "types"],
       "lib": ["es2018", "dom"]
     },
-    "include": ["src/**/*.ts", "src/scripts/deploy.js"],
+    "include": ["src/**/*.ts", "src/scripts/deploy.cjs"],
     "exclude": ["node_modules", "dist"]
   }
   
