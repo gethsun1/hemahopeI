@@ -26,6 +26,8 @@ const CreateCampaign = ()=>{
       } else {
           console.error('Ethereum wallet not detected');
       }
+
+ 
   }
   useEffect(()=>{
       getConnectedWallet()
