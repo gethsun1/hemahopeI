@@ -93,8 +93,8 @@ const Header = ({ onConnect }) => {
                                             <li className="has-dropdown">
                                                 <a href="#">Donation</a>
                                                 <ul className="submenu">
-                                                    <li><a href="/campaigns">Donation listing</a></li>
-                                                    <li><a href="/create_campaign">Create Listing</a></li>
+                                                    <li><a href="/campaigns">Campaigns</a></li>
+                                                    <li><a href="/create_campaign">Create Campaign</a></li>
                                                 </ul>
                                             </li>
 
