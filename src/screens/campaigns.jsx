@@ -39,11 +39,14 @@ const Campaign = () => {
                         description:c[1],
                         targetItems:c[2]
                      }
-                     setTimeout(()=>{
-                        setCampaigns([object].concat(campaigns))
-                     },3000)
+                     campaigns.push(object)
+                   
+                     
                 
                   })
+                  setTimeout(()=>{
+                    setCampaigns(campaigns)
+                  },2000)
                   
                }
                else
