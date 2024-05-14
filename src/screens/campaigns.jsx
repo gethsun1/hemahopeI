@@ -39,7 +39,10 @@ const Campaign = () => {
                         description:c[1],
                         targetItems:c[2]
                      }
-                     setCampaigns([object].concat(campaigns))
+                     setTimeout(()=>{
+                        setCampaigns([object].concat(campaigns))
+                     },3000)
+                
                   })
                   
                }
@@ -51,6 +54,7 @@ const Campaign = () => {
                      description:c[1],
                      targetItems:c[2]
                   }
+                  
                   setCampaigns([object].concat(campaigns))
 
                }
