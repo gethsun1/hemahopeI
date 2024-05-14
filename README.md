@@ -6,6 +6,8 @@
 
 HemaHope is an innovative platform designed to revolutionize how charity campaigns are managed using blockchain technology. By ensuring transparency, security, and efficiency, HemaHope facilitates physical item donations for various charitable causes.
 
+----
+
 ## Table of Contents
 - [Introduction](#introduction)
 - [Features](#features)
@@ -28,6 +30,7 @@ HemaHope smart contracts are deployed on Dymesion's RollApp X Testnet, leveragin
 - **Smart Contract Integration:** Secure and transparent automation of the donation process.
 - **User-Friendly Interface:** Intuitive and responsive design for accessibility.
 
+----
 ## Technologies Used
 - **Frontend:**
   - React
@@ -42,6 +45,8 @@ HemaHope smart contracts are deployed on Dymesion's RollApp X Testnet, leveragin
 - **Deployment:**
   - Dymesion's RollApp X Testnet
 
+----
+
 ## Setup and Installation
 
 ### Prerequisites
@@ -52,8 +57,8 @@ HemaHope smart contracts are deployed on Dymesion's RollApp X Testnet, leveragin
 ### Installation Steps
 1. Clone the repository:
    ```bash
-   git clone https://github.com/gethsun1/hemahope.git
-   cd hemahope
+   git clone https://github.com/gethsun1/hemahopeI.git
+   cd hemahopeI
    ```
 
 2. Install the dependencies:
@@ -106,8 +111,8 @@ Dymesion’s RollApp X Testnet supports deploying Ethereum Virtual Machine (EVM)
    module.exports = {
      networks: {
        rollappX: {
-         provider: () => new HDWalletProvider(mnemonic, `https://rollappX.infura.io/v3/${infuraProjectId}`),
-         network_id: 1234, // RollApp X Testnet ID
+         provider: () => new HDWalletProvider(mnemonic, 'https://json-rpc.rolxtwo.evm.ra.blumbus.noisnemyd.xyz'),
+         network_id: 100004, // RollApp X Testnet ID
          gas: 5500000,
          confirmations: 2,
          timeoutBlocks: 200,

@@ -28,7 +28,7 @@ module.exports = {
     rolx: {
       url: "https://json-rpc.rolxtwo.evm.ra.blumbus.noisnemyd.xyz",
       chainId: 100004,
-      accounts: ['4c7edcb1541d07021aa9a09fbb4dafe135ab068b87659cce5332a10bb560e373'],
+      accounts: [''],
       gasPrice: 8000000000, // Example gas price, adjust as needed
       gas: 6000000, // Example gas limit, adjust as needed
     },
