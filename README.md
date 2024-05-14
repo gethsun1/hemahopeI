@@ -1,7 +1,7 @@
 
 ---
 [![cover.png](https://i.postimg.cc/8znnNFdD/cover.png)](https://postimg.cc/bZkRRwFF)
-[![cover.png](https://github.com/git/git-scm.com/blob/main/MIT-LICENSE.txt)
+
 
 # HemaHope
 -----
@@ -143,7 +143,7 @@ We welcome contributions from the community. Please follow these steps to contri
 6. Open a pull request.
 
 ## License
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+This project is licensed under the [[MIT](https://github.com/git/git-scm.com/blob/main/MIT-LICENSE.txt) License.
 
 ---
 
