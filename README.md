@@ -1,6 +1,8 @@
 
 ---
 [![cover.png](https://i.postimg.cc/8znnNFdD/cover.png)](https://postimg.cc/bZkRRwFF)
+[![cover.png](https://github.com/git/git-scm.com/blob/main/MIT-LICENSE.txt)
+
 # HemaHope
 -----
 
